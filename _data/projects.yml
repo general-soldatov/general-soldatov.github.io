@@ -1,0 +1,35 @@
+- title: "Физический симулятор"
+  description: "Симулятор движения тел с учетом гравитации и столкновений на Python"
+  tags: ["physics", "python"]
+  featured: true
+  image: "https://via.placeholder.com/400x200?text=Physics+Simulator"
+  code: "https://github.com/yourusername/physics-simulator"
+  demo: "https://yourusername.github.io/physics-simulator"
+
+- title: "Умная теплица"
+  description: "Система автоматизации теплицы на базе ESP32 с датчиками температуры и влажности"
+  tags: ["microcontroller"]
+  featured: true
+  image: "https://via.placeholder.com/400x200?text=Smart+Greenhouse"
+  code: "https://github.com/yourusername/smart-greenhouse"
+
+- title: "Анализатор данных"
+  description: "Инструмент для анализа и визуализации данных с использованием Pandas и Matplotlib"
+  tags: ["python"]
+  featured: true
+  image: "https://via.placeholder.com/400x200?text=Data+Analyzer"
+  code: "https://github.com/yourusername/data-analyzer"
+
+- title: "Эксперимент с маятником"
+  description: "Программа для анализа данных эксперимента с физическим маятником"
+  tags: ["physics", "python"]
+  featured: false
+  image: "https://via.placeholder.com/400x200?text=Pendulum+Experiment"
+  code: "https://github.com/yourusername/pendulum-experiment"
+
+- title: "IoT метеостанция"
+  description: "Метеостанция на базе ESP8266 с отправкой данных в облако"
+  tags: ["microcontroller"]
+  featured: false
+  image: "https://via.placeholder.com/400x200?text=IoT+Weather+Station"
+  code: "https://github.com/yourusername/iot-weather-station"
