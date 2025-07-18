@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты | Физика и программирование</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="tech-header">
+        <div class="circuit-overlay"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О себе</a></li>
+                <li><a href="projects.html" class="active">Проекты</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Мои проекты</h1>
+            <p class="subtitle">Программирование и физические эксперименты</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="physics">Физика</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="microcontroller">Микроконтроллеры</button>
+                </div>
+                
+                <div id="projects-container" class="projects-grid">
+                    <!-- Проекты будут загружены через JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: example@domain.com</p>
+                    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Моя специализация</h3>
+                    <ul>
+                        <li>Физика</li>
+                        <li>Python программирование</li>
+                        <li>Микроконтроллеры</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Физика и программирование. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
