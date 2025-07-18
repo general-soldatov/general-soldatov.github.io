@@ -3,25 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Физика и программирование | Репетитор и разработчик</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать на мой сайт!</h1>
+    <header class="tech-header">
+        <div class="circuit-overlay"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О себе</a></li>
+                <li><a href="projects.html">Проекты</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Физика и программирование</h1>
+            <p class="subtitle">Репетиторство | Python | Микроконтроллеры</p>
+            <div class="binary-animation">01010000 01101000 01111001 01110011 01101001 01100011 01110011</div>
+        </div>
     </header>
+
     <main>
-        <p>Это мой первый опыт создания сайта.</p>
+        <section class="intro-section">
+            <div class="container">
+                <div class="profile-photo">
+                    <img src="images/profile.jpg" alt="Мое фото">
+                </div>
+                <div class="intro-text">
+                    <h2>Приветствую!</h2>
+                    <p>Я репетитор по физике и программист с опытом работы с Python и микроконтроллерами. Помогаю студентам понять сложные концепции физики и освоить программирование.</p>
+                    <a href="about.html" class="btn">Подробнее обо мне</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="specialization-section">
+            <div class="container">
+                <h2>Моя специализация</h2>
+                <div class="spec-cards">
+                    <div class="spec-card">
+                        <div class="icon physics-icon"></div>
+                        <h3>Физика</h3>
+                        <p>Механика, электродинамика, квантовая физика. Подготовка к экзаменам и олимпиадам.</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="icon python-icon"></div>
+                        <h3>Python</h3>
+                        <p>Разработка на Python: от основ до машинного обучения и анализа данных.</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="icon microcontroller-icon"></div>
+                        <h3>Микроконтроллеры</h3>
+                        <p>Программирование Arduino, ESP, STM32. IoT проекты и автоматизация.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="container">
+                <h2>Избранные проекты</h2>
+                <div id="featured-projects" class="projects-grid">
+                    <!-- Проекты будут загружены через JavaScript -->
+                </div>
+                <a href="projects.html" class="btn">Все проекты</a>
+            </div>
+        </section>
     </main>
-    <h2>Введи свои данные:</h2>
-    <form action="display.php" method="POST">
-    <p>Введите имя: <input type="text" name="firstname" /></p>
-    <p>Введите фамилию: <input type="text" name="lastname"
-    /></p>
-    <input type="submit" value="Отправить">
-    </form>
-    <footer>
-        <p>&copy; 2025 Мой сайт</p>
+
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: example@domain.com</p>
+                    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Моя специализация</h3>
+                    <ul>
+                        <li>Физика</li>
+                        <li>Python программирование</li>
+                        <li>Микроконтроллеры</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Физика и программирование. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
