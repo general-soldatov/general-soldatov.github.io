@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchProjects() {
     try {
         // Загрузка YAML файла (GitHub Pages требует raw-ссылки)
-        const response = await fetch('https://raw.githubusercontent.com/yourusername/yourrepo/main/_data/projects.yml');
+        const response = await fetch('https://general-soldatov.github.io/_data/projects.yml');
         const yamlText = await response.text();
         
         // Преобразование YAML в JSON (используем js-yaml)
