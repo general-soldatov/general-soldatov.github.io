@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 async function fetchProjects() {
     try {
         // Загрузка YAML файла (GitHub Pages требует raw-ссылки)
-        // const response = await fetch('https://github.com/general-soldatov/general-soldatov.github.io/blob/main/_data/projects.json');
-        // const projectsData = await response.text();
-        const data = require('./data.json');
+        const response = await fetch('https://general-soldatov.github.io/data/projects.json');
+        const projectsData = await response.json();
 
         // Преобразование YAML в JSON (используем js-yaml)
         // const projectsData = jsyaml.load(yamlText);
@@ -20,7 +19,7 @@ async function fetchProjects() {
         // renderFeaturedProjects(projectsData);
 
         // Отрисовка всех проектов на странице проектов
-        renderAllProjects(data);
+        renderAllProjects(projectsData);
     } catch (error) {
         console.error('Error loading projects:', error);
     }
@@ -38,8 +37,7 @@ function renderFeaturedProjects(projects) {
 
     // Отрисовываем проекты
     limitedProjects.forEach(project => {
-        // featuredContainer.appendChild(createProjectCard(project));
-        featuredContainer.innerHTML = projects;
+        featuredContainer.appendChild(createProjectCard(project));
     });
 }
 
@@ -48,10 +46,9 @@ function renderAllProjects(projects) {
     if (!projectsContainer) return;
 
     // Отрисовываем все проекты
-    // projects.forEach(project => {
-        // projectsContainer.appendChild(createProjectCard(project));
-        projectsContainer.innerHTML = projects;
-    // });
+    projects.forEach(project => {
+        projectsContainer.appendChild(createProjectCard(project));
+    });
 }
 
 function createProjectCard(project) {
