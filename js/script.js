@@ -22,6 +22,8 @@ async function fetchProjects() {
         renderAllProjects(projectsData);
         // Отрисовка года и копирайта
         renderCopyright();
+        renderFooter();
+
     } catch (error) {
         console.error('Error loading projects:', error);
     }
@@ -118,8 +120,11 @@ function filterProjects(filter) {
 function renderCopyright() {
     const copyright = document.getElementsByClassName('copyright')[0];
     const textCopy = document.createElement('p');
-    const year = 2025;
-    textCopy.innerHTML = `&copy; ${year} Физика и программирование. Все права защищены.`;
+    const year = new Date();
+    textCopy.innerHTML = `&copy; ${year.getFullYear()} Физика и программирование. Все права защищены.`;
     copyright.appendChild(textCopy);
+}
+
+function renderFooter() {
 
 }

@@ -1,0 +1,20 @@
+{
+    "name": "Физика и программирование",
+    "contacts": {
+        "name": "Контакты",
+        "content": {
+            "E-mail": ["example@domain.com", ""],
+            "GitHub": ["", "https://github.com/yourusername"],
+            "Telegram": ["", ""],
+            "Stepik": ["", ""]
+        }
+    },
+    "speciality": {
+        "name": "Моя специализация",
+        "content": [
+            "Физика",
+            "Python",
+            "Микроконтроллеры"
+        ]
+    }
+}
