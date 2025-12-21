@@ -3,10 +3,10 @@
     "contacts": {
         "name": "Контакты",
         "content": {
-            "E-mail": ["example@domain.com", ""],
-            "GitHub": ["", "https://github.com/yourusername"],
-            "Telegram": ["", ""],
-            "Stepik": ["", ""]
+            "E-mail": ["example@domain.com", "#"],
+            "GitHub": ["Git", "https://github.com/yourusername"],
+            "Telegram": ["gs", "gs.com"],
+            "Stepik": ["sd", "dss.co"]
         }
     },
     "speciality": {

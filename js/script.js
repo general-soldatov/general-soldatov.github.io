@@ -8,21 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function fetchProjects() {
     try {
-        // Загрузка YAML файла (GitHub Pages требует raw-ссылки)
+        // Загрузка json файла
         const response = await fetch('https://general-soldatov.github.io/data/projects.json');
         const projectsData = await response.json();
 
-        // Преобразование YAML в JSON (используем js-yaml)
-        // const projectsData = jsyaml.load(yamlText);
+        const responseInfo = await fetch('https://general-soldatov.github.io/data/info.json');
+        const projectInfo = await responseInfo.json();
 
         // Отрисовка избранных проектов на главной
         renderFeaturedProjects(projectsData);
 
         // Отрисовка всех проектов на странице проектов
         renderAllProjects(projectsData);
-        // Отрисовка года и копирайта
-        renderCopyright();
-        renderFooter();
+        // Отрисовка нижнего контейнера
+        renderFooter(projectInfo);
 
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -117,14 +116,51 @@ function filterProjects(filter) {
     });
 }
 
-function renderCopyright() {
-    const copyright = document.getElementsByClassName('copyright')[0];
+function renderCopyright(name) {
+    const copyright = document.createElement('div');
+    copyright.className = "copyright";
     const textCopy = document.createElement('p');
     const year = new Date();
-    textCopy.innerHTML = `&copy; ${year.getFullYear()} Физика и программирование. Все права защищены.`;
+    textCopy.innerHTML = `&copy; ${year.getFullYear()} ${name}. Все права защищены.`;
     copyright.appendChild(textCopy);
+    return copyright;
 }
 
-function renderFooter() {
+function addContacts(contacts) {
+    const footerSection = document.createElement('div');
+    footerSection.className = "footer-section";
+    footerSection.innerHTML = `<h3>${contacts.name}</h3>`;
+    for (key in contacts.content) {
+        const p = document.createElement('p');
+        p.innerHTML = `${key}: <a href="${contacts.content[key][1]}"  target="_blank">${contacts.content[key][0]}</a>`
+        footerSection.appendChild(p);
+    }
+    return footerSection
+}
 
+function addSpeciality(speciality) {
+    const footerSection = document.createElement('div');
+    footerSection.className = "footer-section";
+    footerSection.innerHTML = `<h3>${speciality.name}</h3>`;
+    const ul = document.createElement('ul');
+    for (key in speciality.content) {
+        const li = document.createElement('li');
+        li.innerHTML = speciality.content[key];
+        ul.appendChild(li);
+    }
+    footerSection.appendChild(ul);
+    return footerSection
+}
+
+function renderFooter(projectInfo) {
+    const techFooter = document.getElementsByClassName('tech-footer')[0];
+    const containerData = document.createElement('div');
+    containerData.className = "container";
+    const footerContainer = document.createElement('div');
+    footerContainer.className = "footer-content";
+    footerContainer.appendChild(addContacts(projectInfo.contacts));
+    footerContainer.appendChild(addSpeciality(projectInfo.speciality));
+    containerData.appendChild(footerContainer);
+    containerData.appendChild(renderCopyright(projectInfo.name));
+    techFooter.appendChild(containerData);
 }
