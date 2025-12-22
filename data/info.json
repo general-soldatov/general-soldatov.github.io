@@ -3,18 +3,23 @@
     "contacts": {
         "name": "Контакты",
         "content": {
-            "E-mail": ["example@domain.com", "#"],
-            "GitHub": ["Git", "https://github.com/yourusername"],
-            "Telegram": ["gs", "gs.com"],
-            "Stepik": ["sd", "dss.co"]
+            "E-mail": ["general-soldatov@mail.ru", "#"],
+            "GitHub": ["Profile", "https://github.com/general-soldatov"],
+            "Telegram": ["Юрий Солдатов", "https://t.me/general_soldatov"],
+            "Stepik": ["Мой профиль", "https://stepik.org/users/758257555/profile"],
+            "E-library": ["Мой профиль", "https://www.elibrary.ru/author_profile.asp?authorid=997309"],
+            "ORCID": ["Profile", "https://orcid.org/0009-0006-0672-0289"]
         }
     },
     "speciality": {
         "name": "Моя специализация",
         "content": [
-            "Физика",
+            "Общая физика",
+            "Теоретическая механика",
             "Python",
-            "Микроконтроллеры"
+            "Telegram боты",
+            "Микроконтроллеры AVR",
+            "Микроконтроллеры ESP32"
         ]
     }
 }
