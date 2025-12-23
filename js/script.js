@@ -22,6 +22,8 @@ async function fetchProjects() {
         renderAllProjects(projectsData);
         // Отрисовка нижнего контейнера
         renderFooter(projectInfo);
+        // Отрисовываем опыт работы
+        addWorks(projectInfo);
 
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -152,6 +154,7 @@ function addSpeciality(speciality) {
     return footerSection
 }
 
+
 function renderFooter(projectInfo) {
     const techFooter = document.getElementsByClassName('tech-footer')[0];
     const containerData = document.createElement('div');
@@ -163,4 +166,21 @@ function renderFooter(projectInfo) {
     containerData.appendChild(footerContainer);
     containerData.appendChild(renderCopyright(projectInfo.name));
     techFooter.appendChild(containerData);
+}
+
+function addWorks(projectInfo) {
+    const workElem = document.getElementById("works-data");
+    // if (!workElem)
+    //     return;
+    for (key in projectInfo.works) {
+        console.log(key);
+        const li = document.createElement("li");
+        for (elem in projectInfo.works[key]) {
+            const span = document.createElement("span");
+            span.className = elem;
+            span.innerText = projectInfo.works[key][elem];
+            li.appendChild(span);
+        }
+        workElem.appendChild(li);
+    }
 }
