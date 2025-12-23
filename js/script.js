@@ -23,7 +23,7 @@ async function fetchProjects() {
         // Отрисовка нижнего контейнера
         renderFooter(projectInfo);
         // Отрисовываем опыт работы
-        addWorks(projectInfo);
+        addToInfoMyself(projectInfo, "works-data");
 
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -168,12 +168,11 @@ function renderFooter(projectInfo) {
     techFooter.appendChild(containerData);
 }
 
-function addWorks(projectInfo) {
-    const workElem = document.getElementById("works-data");
-    // if (!workElem)
-    //     return;
+function addToInfoMyself(projectInfo, idData) {
+    const workElem = document.getElementById(idData);
+    if (!workElem)
+        return;
     for (key in projectInfo.works) {
-        console.log(key);
         const li = document.createElement("li");
         for (elem in projectInfo.works[key]) {
             const span = document.createElement("span");
