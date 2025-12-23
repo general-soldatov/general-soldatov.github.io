@@ -22,8 +22,9 @@ async function fetchProjects() {
         renderAllProjects(projectsData);
         // Отрисовка нижнего контейнера
         renderFooter(projectInfo);
-        // Отрисовываем опыт работы
-        addToInfoMyself(projectInfo, "works-data");
+        // Отрисовываем опыт работы и образование
+        addToInfoMyself(projectInfo, "education");
+        addToInfoMyself(projectInfo, "works");
 
     } catch (error) {
         console.error('Error loading projects:', error);
@@ -172,12 +173,12 @@ function addToInfoMyself(projectInfo, idData) {
     const workElem = document.getElementById(idData);
     if (!workElem)
         return;
-    for (key in projectInfo.works) {
+    for (key in projectInfo[idData]) {
         const li = document.createElement("li");
-        for (elem in projectInfo.works[key]) {
+        for (elem in projectInfo[idData][key]) {
             const span = document.createElement("span");
             span.className = elem;
-            span.innerText = projectInfo.works[key][elem];
+            span.innerText = projectInfo[idData][key][elem];
             li.appendChild(span);
         }
         workElem.appendChild(li);
