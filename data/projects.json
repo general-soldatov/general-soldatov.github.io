@@ -1,12 +1,12 @@
 [
   {
-    "title": "Физический симулятор",
-    "description": "Симулятор движения тел с учетом гравитации и столкновений на Python",
-    "tags": ["physics", "python"],
+    "title": "Программирование микроконтроллеров AVR на языке С",
+    "description": "В курсе представлен достаточно обширный текстовый материал, который необходим для понимания работы микроконтроллера. Если Arduino-конструктор надоел и вы хотите взять в руки паяльник и собрать своё устройство (ну или на макетной плате), то курс точно для вас!",
+    "tags": ["microcontroller", "cpp"],
     "featured": true,
-    "image": "https://via.placeholder.com/400x200?text=Physics+Simulator",
-    "code": "https://github.com/yourusername/physics-simulator",
-    "demo": "https://yourusername.github.io/physics-simulator"
+    "image": "https://cdn.stepik.net/media/cache/images/courses/231296/cover_GCw5wRe/850078ab6665282a0197a08c71f31a02.jpg",
+    "code": "https://github.com/general-soldatov/AVR_school_projects",
+    "demo": "https://stepik.org/course/231296/info"
   },
   {
     "title": "Физический симулятор",
