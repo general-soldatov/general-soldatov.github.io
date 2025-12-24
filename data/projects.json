@@ -19,11 +19,38 @@
   },
   {
     "title": "Термех TG Бот",
-    "description": "Твой робот-помощник в освоении предмета 'Теоретическая механика",
-    "tags": ["physics", "python"],
+    "description": "Твой робот-помощник в освоении предмета 'Теоретическая механика'. В меню встроенной клавиатуры ты можешь найти пособия для самостоятельной работы, учебник. Также возможно найти информацию в своём профиле, расписание преподавателя, сдать лабораторную и решать семинарские задачи.",
+    "tags": ["physics", "python", "telegram"],
     "featured": true,
     "image": "images/termex-bot.jpg",
     "code": "https://github.com/general-soldatov/serverless_bot",
     "demo": "https://t.me/TerMexVrn_Bot"
+  },
+  {
+    "title": "Физика Assistent TG Бот",
+    "description": "Твой твой робот-помощник в освоении предмета 'Физика'. В меню встроенной клавиатуры ты можешь найти пособия для самостоятельной работы, учебник. Также возможно найти информацию в своём профиле, расписание преподавателя, сдать лабораторную и решать семинарские задачи.",
+    "tags": ["physics", "python", "telegram"],
+    "featured": true,
+    "image": "images/physic-bot.jpg",
+    "code": "https://github.com/general-soldatov/phys-serverless-bot",
+    "demo": "https://t.me/Phys_GS_Bot"
+  },
+  {
+    "title": "FSM-on-dynamodb",
+    "description": "Надстройка над aiogram для организации FSM (finite-state-machine) на базе базы данных dynamodb с использованием библиотеки boto3 & botocore. Может быть использована на serverless-решениях AWS и YandexCloud.",
+    "tags": ["telegram", "python"],
+    "featured": true,
+    "image": "images/termex-bot.jpg",
+    "code": "https://github.com/general-soldatov/serverless_bot",
+    "demo": "https://t.me/TerMexVrn_Bot"
+  },
+  {
+    "title": "parce-markdown",
+    "description": "Библиотека для парсинга markdown-файла и его преобразования в html-текст или файл.",
+    "tags": ["python"],
+    "featured": true,
+    "image": "https://pypi.org/static/images/logo-small.8998e9d1.svg",
+    "code": "https://github.com/general-soldatov/py-markdown",
+    "demo": "https://pypi.org/project/parce-markdown/"
   }
   ]
