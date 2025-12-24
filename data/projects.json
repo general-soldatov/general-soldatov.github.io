@@ -40,7 +40,7 @@
     "description": "Надстройка над aiogram для организации FSM (finite-state-machine) на базе базы данных dynamodb с использованием библиотеки boto3 & botocore. Может быть использована на serverless-решениях AWS и YandexCloud.",
     "tags": ["telegram", "python"],
     "featured": true,
-    "image": "images/termex-bot.jpg",
+    "image": "https://pypi.org/static/images/logo-small.8998e9d1.svg",
     "code": "https://github.com/general-soldatov/serverless_bot",
     "demo": "https://t.me/TerMexVrn_Bot"
   },
