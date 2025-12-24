@@ -31,7 +31,7 @@
     "description": "Твой твой робот-помощник в освоении предмета 'Физика'. В меню встроенной клавиатуры ты можешь найти пособия для самостоятельной работы, учебник. Также возможно найти информацию в своём профиле, расписание преподавателя, сдать лабораторную и решать семинарские задачи.",
     "tags": ["physics", "python", "telegram"],
     "featured": true,
-    "image": "images/physic-bot.jpg",
+    "image": "images/physic-bot.png",
     "code": "https://github.com/general-soldatov/phys-serverless-bot",
     "demo": "https://t.me/Phys_GS_Bot"
   },
